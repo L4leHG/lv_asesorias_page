@@ -1,0 +1,230 @@
+/* ===== VARIABLES DE DISEÑO ===== */
+:root {
+--color-primario: #161540;
+--color-secundario: #f2b366;
+--color-blanco: #fff;
+--color-fondo-claro: #f8f8f8;
+--color-texto-principal: #444;
+--color-borde: #e0e0e0;
+--sombra-suave: 0 2px 8px rgba(22, 21, 64, 0.1);
+--transicion: all 0.3s ease;
+--font-family: Arial, sans-serif;
+}
+
+/* ===== RESET Y ESTILOS BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--color-texto-principal);
+    background-color: var(--color-fondo-claro);
+    line-height: 1.6;
+}
+
+/* ===== SECCIÓN DE CONTACTO ===== */
+.contacto-seccion {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--color-blanco) 0%, var(--color-fondo-claro) 100%);
+}
+
+/* Agregada estructura semántica con flexbox para centrado */
+.header-formulario {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.header-formulario h1 {
+    font-size: 2.5rem;
+    color: var(--color-primario);
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+.header-formulario p {
+    font-size: 1.1rem;
+    color: var(--color-texto-principal);
+}
+
+/* ===== CONTENEDOR DEL FORMULARIO ===== */
+/* Contenedor con sombra y borde redondeado */
+.formulario-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--color-blanco);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--sombra-suave);
+    border-top: 4px solid var(--color-secundario);
+}
+
+/* ===== FORMULARIO ===== */
+.formulario-cita {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Grupos de control con espaciado consistente */
+.grupo-control {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grupo-control label {
+    font-weight: bold;
+    color: var(--color-primario);
+    font-size: 0.95rem;
+}
+
+.grupo-control input,
+.grupo-control textarea {
+    padding: 12px 16px;
+    border: 1px solid var(--color-borde);
+    border-radius: 6px;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    color: var(--color-texto-principal);
+    background-color: var(--color-blanco);
+    transition: var(--transicion);
+}
+
+/* Estados hover y focus para mejor UX */
+.grupo-control input:hover,
+.grupo-control textarea:hover {
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 0 3px rgba(242, 179, 102, 0.1);
+    }
+
+.grupo-control input:focus,
+.grupo-control textarea:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 3px rgba(22, 21, 64, 0.1);
+}
+
+.grupo-control textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* ===== BOTÓN ===== */
+/* Botón con colores de la paleta y efectos interactivos */
+.btn-submit {
+    padding: 14px 32px;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    border: none;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transicion);
+    box-shadow: var(--sombra-suave);
+    margin-top: 16px;
+}
+
+.btn-submit:hover {
+    background-color: #f0a950;
+    color: var(--color-primario);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(242, 179, 102, 0.3);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+    box-shadow: var(--sombra-suave);
+}
+
+/* ===== FOOTER ===== */
+/* Footer con estilos coherentes con la paleta */
+.footer-contacto {
+    width: 100%;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-contacto h3 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+.footer-contacto h4 {
+    font-size: 1.1rem;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+.footer-contacto p {
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+.footer-contacto a {
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transicion);
+}
+
+.footer-contacto a:hover {
+    text-decoration: underline;
+    color: var(--color-blanco);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Adaptaciones para tablets y dispositivos móviles */
+@media (max-width: 768px) {
+    .contacto-seccion {
+    padding: 24px 16px;
+    }
+
+.header-formulario h1 {
+    font-size: 2rem;
+}
+
+.formulario-container {
+    padding: 32px 20px;
+    max-width: 100%;
+}
+
+.formulario-cita {
+    gap: 20px;
+}
+}
+
+@media (max-width: 480px) {
+.header-formulario h1 {
+    font-size: 1.75rem;
+}
+
+.formulario-container {
+    padding: 24px 16px;
+}
+
+.grupo-control label {
+    font-size: 0.9rem;
+}
+
+.btn-submit {
+    font-size: 1rem;
+    padding: 12px 24px;
+}
+}

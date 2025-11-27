@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda tu Consulta Legal - LV</title>
+    <link rel="stylesheet" href="../proy_LV_asesorias/css/Estilos_form.css"> </head>
+<body>
+    <section class="contacto-seccion">
+        
+        <div class="header-formulario">
+            <h1>Agenda tu Consulta Legal</h1>
+            <p>Ingresa tus datos personales y me comunicaré contigo a la brevedad.</p>
+        </div>
+        
+        <div class="formulario-container">
+            
+            <form action="/procesar-cita" method="POST" class="formulario-cita"> 
+                
+                <div class="grupo-control">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre_completo" placeholder="Introduce tu nombre completo" required>
+                </div>
+                
+                <div class="grupo-control">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="correo_electronico" placeholder="Introduce tu correo electrónico" required>
+                </div>
+                
+                <div class="grupo-control">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Introduce tu número de teléfono">
+                </div>
+                
+                <div class="grupo-control">
+                    <label for="asunto">Asunto / Descripción del Caso</label>
+                    <textarea id="asunto" name="descripcion_caso" placeholder="Describe brevemente tu caso" rows="4" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-submit">Agendar Cita</button>
+                
+            </form>
+
+        </div>
+    </section>
+
+    <footer class="footer-contacto">
+        <h3>Otras Formas de Contacto</h3>
+        <p><strong>Email:</strong> <a href="mailto:leidyvr@gmail.com">leidyvr@gmail.com</a></p>
+        <p><strong>Teléfono:</strong> <a href="tel:+573123009714">+57 312 3009714</a></p>
+        <h4>Sígueme en Redes Sociales</h4>
+        </footer>
+
+</body>
+</html>
