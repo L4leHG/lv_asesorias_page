@@ -15,7 +15,10 @@
         
         <div class="formulario-container">
             
-            <form action="/procesar-cita" method="POST" class="formulario-cita"> 
+            <!-- Contenedor para mensajes de éxito/error -->
+            <div id="mensaje-container" class="mensaje-container"></div>
+            
+            <form method="POST" class="formulario-cita" id="formContacto"> 
                 
                 <div class="grupo-control">
                     <label for="nombre">Nombre Completo</label>
@@ -37,6 +40,10 @@
                     <textarea id="asunto" name="descripcion_caso" placeholder="Describe brevemente tu caso" rows="4" required></textarea>
                 </div>
                 
+                <div class="aviso-proteccion-datos">
+                    <p>"Los datos recolectados serán tratados conforme a la política de protección de datos, establecidos en la <b>ley 1581 del 2012</b> de conformidad con habeas data, término relacionado al uso de datos personales con la finalidad de analizar y ratificar los datos entregados por los usuarios."</p>
+                </div>
+                
                 <button type="submit" class="btn-submit">Agendar Cita</button>
                 
             </form>
@@ -50,6 +57,9 @@
         <p><strong>Teléfono:</strong> <a href="tel:+573123009714">+57 312 3009714</a></p>
         <h4>Sígueme en Redes Sociales</h4>
         </footer>
+
+    <!-- Script para manejar el envío del formulario con AJAX -->
+    <script src="../proy_LV_asesorias/js/form_contacto.js"></script>
 
 </body>
 </html>
