@@ -1,0 +1,17 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Archivos de configuración sensibles (IMPORTANTE: contiene credenciales)
+php/config_email.php
+
+# Nota: NO ignoramos vendor/PHPMailer porque necesitamos subirlo para Vercel
+# Si usas Composer en el futuro, puedes ignorar vendor/ pero mantener PHPMailer
+
