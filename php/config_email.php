@@ -10,7 +10,7 @@ define('SMTP_USERNAME', getenv('SMTP_USERNAME') ?: 'lalehurtado.g@gmail.com');
 define('SMTP_PASSWORD', getenv('SMTP_PASSWORD') ?: 'xoih gyvj jcda rtqd');
 
 // Correo de destino (donde el abogado recibirá las notificaciones)
-define('EMAIL_DESTINO', getenv('EMAIL_DESTINO') ?: 'laurahvalleavanza@gmail.com');
+define('EMAIL_DESTINO', getenv('EMAIL_DESTINO') ?: 'lalehurtado.g@gmail.com');
 
 // Nombre que aparecerá como remitente
 define('EMAIL_REMITENTE_NOMBRE', 'Sistema de Consultas Legales');
