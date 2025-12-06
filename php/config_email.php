@@ -7,7 +7,7 @@ define('SMTP_SECURE', 'tls'); // tls o ssl
 
 // Credenciales de Gmail (usa variables de entorno en producción, valores locales para desarrollo)
 define('SMTP_USERNAME', getenv('SMTP_USERNAME') ?: 'lalehurtado.g@gmail.com');
-define('SMTP_PASSWORD', getenv('SMTP_PASSWORD') ?: 'xoih gyvj jcda rtqd');
+define('SMTP_PASSWORD', getenv('SMTP_PASSWORD') ?: 'pruebapassword');
 
 // Correo de destino (donde el abogado recibirá las notificaciones)
 define('EMAIL_DESTINO', getenv('EMAIL_DESTINO') ?: 'lalehurtado.g@gmail.com');
